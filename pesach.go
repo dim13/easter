@@ -1,8 +1,13 @@
 package calendar
 
-// Calculate the Julian date of Pesach using the Gauss formula
+import "time"
 
-func Pesach(year int) int {
+// Pesach date of Pesach using the Gauss formula
+func Pesach(year int) time.Time {
+	return date(year, pesach(year))
+}
+
+func pesach(year int) int {
 	var a, b, y, cumdays int
 	var d float64
 

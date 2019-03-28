@@ -59,9 +59,8 @@ func TestEaster(t *testing.T) {
 	}
 	for _, tc := range testCases {
 		got := Easter(tc.year)
-		z := time.Date(tc.year, 1, got, 0, 0, 0, 0, time.UTC)
-		if z.Day() != tc.day || z.Month() != tc.month {
-			t.Logf("got %v, want %v", z.Format("02 Jan 2006"), tc)
+		if got.Day() != tc.day || got.Month() != tc.month {
+			t.Logf("got %v, want %v", got.Format("02 Jan 2006"), tc)
 		}
 	}
 }

@@ -1,9 +1,13 @@
 package calendar
 
-// return year day for Orthodox Easter using Gauss formula
-// (new style result); subtract 13 for old style
+import "time"
 
-func Paskha(year int) int {
+// Paskha date for Orthodox Easter using Gauss formula
+func Paskha(year int) time.Time {
+	return date(year, paskha(year))
+}
+
+func paskha(year int) int {
 	var a, b, c, d, e int
 	const (
 		x = 15

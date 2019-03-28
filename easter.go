@@ -1,8 +1,13 @@
 package calendar
 
-// return year day for Easter
+import "time"
 
-func Easter(year int) int {
+// Easter date
+func Easter(year int) time.Time {
+	return date(year, easter(year))
+}
+
+func easter(year int) int {
 	var a, b, c, d, e, f, g, h, i, k, l, m, n, p, q int
 
 	// silly, but it works
