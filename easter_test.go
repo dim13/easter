@@ -5,10 +5,6 @@ import (
 	"time"
 )
 
-/*
-
- */
-
 func TestEaster(t *testing.T) {
 	testCases := []struct {
 		year  int

@@ -14,7 +14,7 @@ func paskha(year int) int {
 	d := (19*a + 15) % 30
 	e := (2*b + 4*c + 6*d + 6) % 7
 	cumdays := 31 + 28
-	if isleap(year) {
+	if isLeap(year) {
 		cumdays++
 	}
 	return (cumdays + 22) + (d + e) + 13

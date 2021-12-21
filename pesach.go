@@ -35,7 +35,7 @@ func pesach(year int) int {
 	}
 
 	cumdays += 31 + 28
-	if isleap(year) {
+	if isLeap(year) {
 		cumdays += 1
 	}
 	return cumdays

@@ -23,7 +23,7 @@ func easter(year int) int {
 	n := (h + l + 114 - (7 * m)) / 31
 	p := (h + l + 114 - (7 * m)) % 31
 	q := 31 + 28 + p + 1
-	if isleap(year) {
+	if isLeap(year) {
 		q++
 	}
 	if n == 4 {

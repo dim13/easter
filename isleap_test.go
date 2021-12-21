@@ -29,7 +29,7 @@ func checkLeapYear(t *testing.T, year int) bool {
 
 func TestIsLeap(t *testing.T) {
 	for i := 1800; i <= 2400; i++ {
-		got, want := isleap(i), checkLeapYear(t, i)
+		got, want := isLeap(i), checkLeapYear(t, i)
 		if got != want {
 			t.Errorf("%v got %v, want %v", i, got, want)
 		}
